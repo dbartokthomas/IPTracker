@@ -29,5 +29,30 @@ namespace IPTracker
 
             this.whenChangesList.SelectedIndex = 0;
         }
+
+        private void whenChangesList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //When this changes, change the panel
+            var newSelection = whenChangesList.SelectedItem as string;
+
+            //Check it
+            switch (newSelection.ToLower())
+            { 
+                case "email":
+                    if (!whenChangesPanel.HasChildren || !(whenChangesPanel.Controls[0] is Control.Email))
+                    {
+                        whenChangesPanel.Controls.Clear();
+                        whenChangesPanel.Controls.Add(new Control.Email());
+                    }
+                    break;
+                case "httprequest":
+                    if (!whenChangesPanel.HasChildren || !(whenChangesPanel.Controls[0] is Control.HttpRequest))
+                    {
+                        whenChangesPanel.Controls.Clear();
+                        whenChangesPanel.Controls.Add(new Control.HttpRequest());
+                    }
+                    break;
+            }
+        }
     }
 }

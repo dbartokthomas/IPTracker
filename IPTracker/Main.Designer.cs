@@ -33,14 +33,15 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.whenChangesList = new System.Windows.Forms.ComboBox();
+            this.serviceList = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.serviceList = new System.Windows.Forms.ComboBox();
-            this.whenChangesList = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.whenChangesPanel = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +87,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.whenChangesPanel);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.whenChangesList);
             this.groupBox2.Controls.Add(this.serviceList);
@@ -96,10 +98,59 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(14, 57);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(278, 286);
+            this.groupBox2.Size = new System.Drawing.Size(372, 337);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Automatic";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "When Changes";
+            // 
+            // whenChangesList
+            // 
+            this.whenChangesList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.whenChangesList.FormattingEnabled = true;
+            this.whenChangesList.Items.AddRange(new object[] {
+            "Email",
+            "HttpRequest"});
+            this.whenChangesList.Location = new System.Drawing.Point(92, 66);
+            this.whenChangesList.Name = "whenChangesList";
+            this.whenChangesList.Size = new System.Drawing.Size(174, 21);
+            this.whenChangesList.TabIndex = 6;
+            this.whenChangesList.SelectedIndexChanged += new System.EventHandler(this.whenChangesList_SelectedIndexChanged);
+            // 
+            // serviceList
+            // 
+            this.serviceList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.serviceList.FormattingEnabled = true;
+            this.serviceList.Location = new System.Drawing.Point(92, 39);
+            this.serviceList.Name = "serviceList";
+            this.serviceList.Size = new System.Drawing.Size(174, 21);
+            this.serviceList.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Address Service";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(131, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "secs";
             // 
             // textBox2
             // 
@@ -110,7 +161,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(208, 257);
+            this.button1.Location = new System.Drawing.Point(302, 308);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(64, 23);
             this.button1.TabIndex = 0;
@@ -126,59 +177,18 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Update Interval";
             // 
-            // label3
+            // whenChangesPanel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(131, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "secs";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Address Service";
-            // 
-            // serviceList
-            // 
-            this.serviceList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.serviceList.FormattingEnabled = true;
-            this.serviceList.Location = new System.Drawing.Point(92, 39);
-            this.serviceList.Name = "serviceList";
-            this.serviceList.Size = new System.Drawing.Size(174, 21);
-            this.serviceList.TabIndex = 5;
-            // 
-            // whenChangesList
-            // 
-            this.whenChangesList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.whenChangesList.FormattingEnabled = true;
-            this.whenChangesList.Items.AddRange(new object[] {
-            "Email",
-            "HttpRequest"});
-            this.whenChangesList.Location = new System.Drawing.Point(92, 66);
-            this.whenChangesList.Name = "whenChangesList";
-            this.whenChangesList.Size = new System.Drawing.Size(174, 21);
-            this.whenChangesList.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "When Changes";
+            this.whenChangesPanel.Location = new System.Drawing.Point(9, 93);
+            this.whenChangesPanel.Name = "whenChangesPanel";
+            this.whenChangesPanel.Size = new System.Drawing.Size(357, 209);
+            this.whenChangesPanel.TabIndex = 8;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 355);
+            this.ClientSize = new System.Drawing.Size(398, 406);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Main";
@@ -207,5 +217,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox whenChangesList;
+        private System.Windows.Forms.Panel whenChangesPanel;
 	}
 }

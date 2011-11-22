@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\Email.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\HttpRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\HttpRequest.Designer.cs">
+      <DependentUpon>HttpRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="IPAddress.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -55,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Control\Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
