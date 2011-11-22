@@ -24,7 +24,7 @@ namespace IPTracker
         private void Main_Load(object sender, EventArgs e)
         {
             //Add the available Services to the list
-            this.serviceList.Items.Add(IPAddressFinder.WhatIsMyIpDotOrg);
+            this.serviceList.Items.Add(IPAddressService.WhatIsMyIpDotOrg);
             this.serviceList.SelectedIndex = 0;
 
             this.whenChangesList.SelectedIndex = 0;
