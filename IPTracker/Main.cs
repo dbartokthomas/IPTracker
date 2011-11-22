@@ -15,5 +15,19 @@ namespace IPTracker
         {
             InitializeComponent();
         }
+
+        private void refreshIp_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            //Add the available Services to the list
+            this.serviceList.Items.Add(IPAddressFinder.WhatIsMyIpDotOrg);
+            this.serviceList.SelectedIndex = 0;
+
+            this.whenChangesList.SelectedIndex = 0;
+        }
     }
 }
