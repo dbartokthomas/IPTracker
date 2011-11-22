@@ -14,16 +14,16 @@ namespace IPTracker
         /// </summary>
         /// <param name="finder"></param>
         /// <returns></returns>
-        public static IPAddress GetExternalIp(IPAddressFinder finder = IPAddressFinder.WhatIsMyIpDotOrg)
+        public static IPAddress GetExternalIp(IPAddressService finder = IPAddressService.WhatIsMyIpDotOrg)
         {
             throw new NotImplementedException();
         }
     }
 
     /// <summary>
-    /// Enum of the providers we support
+    /// Enum of the services we support
     /// </summary>
-    public enum IPAddressFinder
+    public enum IPAddressService
     {
         /// <summary>
         /// Whatismyip.org
